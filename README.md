@@ -1,5 +1,10 @@
 ### What it looks like
-<img width="1497" height="578" alt="image" src="https://github.com/user-attachments/assets/f5cbae23-1e60-4681-bfdd-4c117ec96287" />
+<img width="1445" height="583" alt="image" src="https://github.com/user-attachments/assets/c3b4fca9-dee4-41e3-a6d9-a0e60d4f1994" />
+
+### How to customise
+You can customise what shows when you run the command using the `config.jsonc` file that is present when you clone the repo.
+The colours work by RGB values and the modules work by putting them in layout. 
+Layout works from top to bottom so be careful how you order it.
 
 ### How often this tool updates
 whenever i feel like it.
