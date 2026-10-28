@@ -11,6 +11,9 @@
 #include <algorithm>
 #include <cmath>
 #include <vector>
+#include <sys/statvfs.h>
+#include <sys/stat.h>
+#include <cstdio>
 
 // read cpu info
 std::string cpuINFO() {

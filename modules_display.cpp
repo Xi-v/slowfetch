@@ -4,10 +4,15 @@
 #include <string>
 #include <iostream>
 #include <format>
+#include <sys/statvfs.h>
+#include <sys/stat.h>
+#include <cstdio>
+#include <string>
 
 // custom libraries
 #include "modules.h"
 #include "modules_display.h"
+#include "disk.h"
 
 // constants for features
 const std::string BOLD = "\x1b[1m";
@@ -103,7 +108,7 @@ std::string displayMemory(const nlohmann::json& config) {
     MemoryInfo memory = memINFO();
 
     // pulls the data from the config file
-    nlohmann::json cfg = config.value("getOS-config", nlohmann::json::object());   
+    nlohmann::json cfg = config.value("memINFO-config", nlohmann::json::object());   
 
     // reads the colour values
     int red = cfg.value("red", 255);
@@ -156,4 +161,24 @@ int visibleWidth(const std::string& s) {
         }
     }
     return width;
+}
+
+// disk
+std::string displayDisk(const nlohmann::json& config, const char* path) {
+    // gathers
+    std::string disk = formatDisk(path);
+ 
+    // pulls the data from the config file
+    nlohmann::json cfg = config.value("getDisk-config", nlohmann::json::object());
+
+    // reads the colour values
+    int red = cfg.value("red", 255);
+    int green = cfg.value("green", 255);
+    int blue = cfg.value("blue", 255);
+
+    std::string message = std::format("\x1b[38;2;{};{};{}m", red, green, blue);
+    message += disk;
+    message += RESET;
+
+    return message;
 }

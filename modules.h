@@ -17,4 +17,5 @@ int calculateWhitespace(int modules);
 int maxWidthCalculator();
 MemoryInfo memINFO();
 
+
 #endif

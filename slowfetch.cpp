@@ -11,6 +11,7 @@
 // custom
 #include "modules.h"
 #include "modules_display.h"
+#include "disk.h"
 
 // main program
 int main() {
@@ -27,25 +28,42 @@ int main() {
 
     // this whole thing shows how it's laid out
     std::vector<std::string> modules;
+    std::vector<std::string> boxNames;
 
     int maxWidth = 0;
     for (const std::string& name : config["layout"]) {
         if (name == "upperBox" || name == "lowerBox" || name == "separator") {
             modules.push_back("");
+            boxNames.push_back(name);
             continue;
         }
 
         if (name == "getUser") {
             modules.push_back(displayUser(config));
+            boxNames.push_back("");
         }
         else if (name == "getOS") {
             modules.push_back(displayOS(config));
+            boxNames.push_back("");
         }
         else if (name == "cpuINFO") {
             modules.push_back(displayCPU(config));
+            boxNames.push_back("");
         }
         else if (name == "memINFO") {
             modules.push_back(displayMemory(config));
+            boxNames.push_back("");
+        }
+        else if (name == "getDisk") {
+            modules.push_back(displayDisk(config, "/"));
+            boxNames.push_back("");
+            if (isSeparateMount("/home")) {
+                modules.push_back(displayDisk(config, "/home"));
+                boxNames.push_back("");
+            }
+        }
+        else {
+            continue;   // unknown name: skip it, don't read modules.back()
         }
 
         maxWidth = std::max(maxWidth, visibleWidth(modules.back()));
@@ -54,11 +72,10 @@ int main() {
     int extension = maxWidth - 2;
 
     for (size_t i = 0; i < modules.size(); i++) {
-        std::string name = config["layout"][i];
-        if (name == "upperBox" || name == "lowerBox" || name == "separator") {
-            modules[i] = displayBox(config, name, extension);
-        }
+    if (!boxNames[i].empty()) {
+        modules[i] = displayBox(config, boxNames[i], extension);
     }
+}
 
     bool filePresent = false;
 

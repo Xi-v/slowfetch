@@ -9,6 +9,7 @@
         "getOS",
         "cpuINFO",
         "memINFO",
+        "getDisk",
         "lowerBox"
     ],
 
@@ -18,15 +19,15 @@
     "ascii-config": {
         "red": 255,
         "green": 255,
-        "blue": 255,
-        "bold": 0 // 0 = No bold effect , 1 = Bold effect
+        "blue": 153,
+        "bold": 1 // 0 = No bold effect , 1 = Bold effect
     },
 
     // each modules individual customisation
     "upperBox-config": {
         "length": -1, // if -1 then that means it will automatically figure out length, else it will set to that value
         "red": 255,
-        "green": 255,
+        "green": 204,
         "blue": 255,
         "startChar": "┌",
         "endChar": "┐",
@@ -36,7 +37,7 @@
     "lowerBox-config": {
         "length": -1, // if -1 then that means it will automatically figure out length, else it will set to that value
         "red": 255,
-        "green": 255,
+        "green": 204,
         "blue": 255,
         "startChar": "└",
         "endChar": "┘",
@@ -46,7 +47,7 @@
     "separator-config": {
         "length": -1, // if -1 then that means it will automatically figure out length, else it will set to that value
         "red": 255,
-        "green": 255,
+        "green": 204,
         "blue": 255,
         "startChar": "|",
         "endChar": "|",
@@ -54,26 +55,33 @@
     },
 
     "getUser-config": {
-        "red": 255,
-        "green": 204,
+        "red": 51,
+        "green": 153,
         "blue": 255
     },
 
     "getOS-config": {
         "red": 255,
-        "green": 204,
-        "blue": 255
+        "green": 153,
+        "blue": 153
     },
 
     "cpuINFO-config": {
         "red": 255,
-        "green": 204,
-        "blue": 255
+        "green": 153,
+        "blue": 153
     },
 
     "memINFO-config": {
         "red": 255,
-        "green": 204,
-        "blue": 255
+        "green": 153,
+        "blue": 153
+    },
+
+    "getDisk-config": {
+        "red": 255,
+        "green": 153,
+        "blue": 153
     }
+
 }
