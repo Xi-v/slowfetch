@@ -5,7 +5,9 @@
 whenever i feel like it.
 
 ### How to install
-`git clone https://github.com/Xi-v/slowfetch.git`
-`cd slowfetch`
-`./slowfetch`
+```bash
+git clone https://github.com/Xi-v/slowfetch.git
+cd slowfetch
+./slowfetch
+```
 And then you can add it to aliases.
