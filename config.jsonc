@@ -1,0 +1,75 @@
+{
+    // layout of the whole thing
+    "layout": [
+        "upperBox",
+        "getUser",
+        "separator",
+        "getOS",
+        "cpuINFO",
+        "memINFO",
+        "lowerBox"
+    ],
+
+    // ascii art config
+    "ascii-config": {
+        "red": 255,
+        "green": 255,
+        "blue": 255,
+        "bold": 0
+    },
+
+    // each modules individual customisation
+    "upperBox-config": {
+        "length": -1,
+        "red": 255,
+        "green": 255,
+        "blue": 255,
+        "startChar": "┌",
+        "endChar": "┐",
+        "pipeChar": "="
+    },
+
+    "lowerBox-config": {
+        "length": -1,
+        "red": 255,
+        "green": 255,
+        "blue": 255,
+        "startChar": "└",
+        "endChar": "┘",
+        "pipeChar": "="
+    },
+
+    "separator-config": {
+        "length": -1,
+        "red": 255,
+        "green": 255,
+        "blue": 255,
+        "startChar": "|",
+        "endChar": "|",
+        "pipeChar": "-"
+    },
+
+    "getUser-config": {
+        "red": 255,
+        "green": 204,
+        "blue": 255
+    },
+
+    "getOS-config": {
+        "red": 255,
+        "green": 204,
+        "blue": 255
+    },
+
+    "cpuINFO-config": {
+        "red": 255,
+        "green": 204,
+        "blue": 255
+    },
+
+    "memINFO-config": {
+        "red": 255,
+        "green": 204,
+        "blue": 255
+    }
+}
