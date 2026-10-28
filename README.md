@@ -13,5 +13,5 @@ cd slowfetch
 And then you can add it to aliases.
 **Example:**
 ```bash
-alias slowfetch='cd *diretory it's installed in* && ./slowfetch && cd "$OLDPWD" >/dev/null'
+alias slowfetch='cd *directory it's installed in* && ./slowfetch && cd "$OLDPWD" >/dev/null'
 ```
