@@ -1,5 +1,7 @@
 {
     // layout of the whole thing
+
+    // goes from top to bottom
     "layout": [
         "upperBox",
         "getUser",
@@ -10,17 +12,19 @@
         "lowerBox"
     ],
 
+    // each colour is in HTML colour code with RGB values
+
     // ascii art config
     "ascii-config": {
         "red": 255,
         "green": 255,
         "blue": 255,
-        "bold": 0
+        "bold": 0 // 0 = No bold effect , 1 = Bold effect
     },
 
     // each modules individual customisation
     "upperBox-config": {
-        "length": -1,
+        "length": -1, // if -1 then that means it will automatically figure out length, else it will set to that value
         "red": 255,
         "green": 255,
         "blue": 255,
@@ -30,7 +34,7 @@
     },
 
     "lowerBox-config": {
-        "length": -1,
+        "length": -1, // if -1 then that means it will automatically figure out length, else it will set to that value
         "red": 255,
         "green": 255,
         "blue": 255,
@@ -40,7 +44,7 @@
     },
 
     "separator-config": {
-        "length": -1,
+        "length": -1, // if -1 then that means it will automatically figure out length, else it will set to that value
         "red": 255,
         "green": 255,
         "blue": 255,
