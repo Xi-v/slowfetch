@@ -9,9 +9,9 @@
 #include <format>
 
 // custom
-#include "modules.h"
-#include "modules_display.h"
-#include "disk.h"
+#include "modules/modules.h"
+#include "modules/modules_display.h"
+#include "modules/disk.h"
 
 // main program
 int main() {
